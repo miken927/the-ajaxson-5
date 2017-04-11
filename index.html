@@ -13,29 +13,30 @@
     </header>
 
     <div class="container-fluid main-content">
-        <div class="row">
 
-        <form id="form-gif-request" />
+        <form id="form-gif-request" >
             <div class="form-group">
-                <label>What kind of Jackson 5 related gif do you want?</label>
-                <br>
-                <input id="tag" size=25 type="text" name="tag" class="form-control"/>
-                <br>
-                <label>Prove you aren't a robot by answering this riddle:</label>
-                <br>
-                <input id="capcha" type="text" name="capcha"/>
-                <strong>Jacksons are better than 1.</strong>
+                <div class="col-xs-4">
+                    <label>What kind of Jackson 5 related gif do you want?</label>
+                    <br>
+                    <input id="tag" size=25 type="text" name="tag" class="form-control"/>
+                    <br>
+                    <label>Prove you aren't a robot by answering this riddle:</label>
+                    <br>
+                    <input id="capcha" type="text" name="capcha"/>
+                    <label>Jacksons are better than 1.</label>
+
+                    <p id="feedback" hidden="true"></p>
+                    <p>
+                    <input type="submit" value="Get my Gif!" class="btn btn-primary"/>
+
+                </div>
             </div>
-            <p id="feedback" hidden="true"></p>
-
-            <input type="submit" value="Get my Gif!" class="btn btn-primary"/>
-
 
         </form>
 
         <img id="gif" src="" hidden="true"/>
 
-        </div>
     </div>
 
 </body>
