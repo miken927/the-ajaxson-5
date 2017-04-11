@@ -22,14 +22,18 @@ function fetchAndDisplayGif(event) {
     var capchaText = $("#capcha").val();
     console.log(capchaText);
     console.log(searchQuery);
-    // configure a few parameters to attach to our request
-    var params = {
-        api_key: "dc6zaTOxFJmzC",
-        tag :  "jackson 5" + searchQuery // TODO should be e.g. "jackson 5 dance"
-    };
 
-    //make an ajax request for a random GIF
+
+
     if (capchaText == 5) {
+        // configure a few parameters to attach to our request
+
+        var params = {
+            api_key: "dc6zaTOxFJmzC",
+            tag :  "jackson 5" + searchQuery // TODO should be e.g. "jackson 5 dance"
+        };
+
+        //make an ajax request for a random GIF
         $.ajax({
             url: "https://api.giphy.com/v1/gifs/random", // TODO where should this request be sent?
             data: params, // attach those extra parameters onto the request
@@ -62,13 +66,6 @@ function fetchAndDisplayGif(event) {
         setGifLoadedStatus(false);
 
     }
-
-
-
-
-    // TODO
-    // give the user a "Loading..." message while they wait
-
 
 }
 
